@@ -20,6 +20,20 @@ String sayBye(String name, int age, [String? country = 'cuba']) => 'Bye $name, $
 String capitalizeName(String? name) => name?.toUpperCase() ?? 'ANON';
 //?? 는 좌측이 null 이면 우측을 반환
 
+//Typedef
+typedef ListOfInts = List<int>;
+
+ListOfInts reverseListOfNum(ListOfInts ss) {
+  var resversed = ss.reversed;
+  return resversed.toList();
+}
+
+typedef UserInfo = Map<String,String>;
+
+String sayHi(UserInfo user) {
+  return 'Hi ${user['name']}';
+}
+
 
 void main(){
   capitalizeName('yongjun');
@@ -37,4 +51,5 @@ void main(){
   // ));
 
   // print(sayBye('yong', 23));
+  print(reverseListOfNum([1,2,3,4,5]));
 }
