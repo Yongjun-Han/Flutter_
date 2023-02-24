@@ -1,4 +1,15 @@
+import 'dart:ffi';
+
 void main(){
-  var name = '다트';
-  name = 'sd';   
+  dynamic name; //다이나믹 변수 
+
+  if(name is String) {
+    
+  }
+  if (name is int){
+
+  }
+
+  name = 1;
+  name = true;
 }  
