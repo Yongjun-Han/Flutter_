@@ -31,4 +31,17 @@ void main(){
     for(var friend in oldFriends)'$friend',
     ];
     print(newFriends);
+
+  // Maps js 객체
+    var player = {
+      'name' : 'jason',
+      'xp' : 4,
+      'superpower' : false,
+    };
+    //object 타입은 ts any 
+    Map<int,bool> result = {
+      1 : true,
+      2 : false,
+      3 : true,
+    };
 }
