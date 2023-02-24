@@ -20,12 +20,15 @@ void main(){
 
   print(greeting);
 
-  //단순변수 는 $,값 변경은 ${}
-
-
-
-
+  //단순변수 참조는 $,값 변경은 ${}
 
   // collection for
-
+  var oldFriends = ['nico','lynn'];
+  var newFriends = [
+    'lewis',
+    'ralph',
+    'darren',
+    for(var friend in oldFriends)'$friend',
+    ];
+    print(newFriends);
 }
