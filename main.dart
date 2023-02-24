@@ -44,4 +44,11 @@ void main(){
       2 : false,
       3 : true,
     };
+
+  //Sets 
+
+  var numvers = {1,2,3,4,5};
+  //set 은 list 돠 다르게 고유한 값이라 동일값은 하나뿐이다  파이썬 tuple
+  numvers.add(1);
+  print(numvers);
 }
