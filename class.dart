@@ -1,14 +1,8 @@
 class Player {
   //class 는 타입 명시가 필수 
-  String name;
-  int xp; 
+  final String name;
+  int xp, age; 
   String team;
-  int age ;
-
-  // Player(String name, int xp){             
-  //   this.name = name;
-  //   this.xp = xp;
-  // }
 
   Player({
     required this.name, 
@@ -17,6 +11,18 @@ class Player {
     required this.team
   });
 
+  Player.createWhitePlayer({required String name, required int age}) : 
+  this.age = age,
+  this.name = name,
+  this.team = 'white',
+  this.xp = 0;
+
+  Player.createBlackPlayer(String name , int age) : 
+  this.age = age,
+  this.name  = name,
+  this.team = 'black',
+  this.xp = 0;
+
   void sayHello(){
     print('my name is $name,$xp,$age,$team');
   }
@@ -24,11 +30,10 @@ class Player {
 
 
 void main(){
-  var player = Player(
+  var whitePlayer = Player.createWhitePlayer(
     name: 'jason',
-    xp: 3242,
     age: 28,
-    team: 'black'
   );
-  player.sayHello();
+  var blackPlayer = Player.createBlackPlayer('jun', 28,);
+
 }
