@@ -1,6 +1,10 @@
 enum Team {red,blue}
 
-class Player {
+abstract class Human {
+  void walk();
+}
+
+class Player extends Human{
   String name;
   int xp ; 
   Team team;
@@ -10,6 +14,10 @@ class Player {
     required this.xp,
     required this.team,
   });
+
+  void walk(){
+    print('im walking');
+  }
 
   void sayHello() {
     print('my name is $name');
