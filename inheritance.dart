@@ -8,24 +8,29 @@ class Human {
   }
 }
 
+//Mixin 생성자가 없는 클래스 
+class Strong {
+  final double strengthLevel = 12333.323;
+}
+
+class Quick {
+  void run(){
+    print('quickkkkkkk');
+  }
+}
+
 enum Team {red,blue}
 
-class Player extends Human{
+class Player with Strong, Quick{
   final Team team;
 
   Player({
     required this.team,
-    required String name,
   })
-  : super(name);
-  
-  @override 
-  void sayHello(){
-    super.sayHello();
-  }
 }
 
 
 void main(){
-  var player = Player(team: Team.blue, name : 'jason');
+  var player = Player(team: Team.blue,);
+  player.run();
 }
